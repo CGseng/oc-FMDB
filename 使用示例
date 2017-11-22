@@ -1,0 +1,42 @@
+//数据库 创建
+//tableName 表名称
+//cols 表列名称数组
+返回 布尔值 判断创建是否成功
+- (BOOL)createAllTableWithTableName:(NSString *)tableName
+                       withColNames:(NSMutableArray *)cols
+                       
+/**
+ * 数据库插入数据 根据数据字典
+ *
+ *  @param tableName  创建的表的名称
+ *  @param  dic       要插入的数据字典
+ */
+- (BOOL )insertDataWithTableName:(NSString *)tableName withDataDic:(NSMutableDictionary *)dic     
+/**
+ * 数据库多条件查询数据 根据键值对获取数据
+ *
+ *  @param tableName 要查询的表的名称
+ *  @param valueDic  基准键值对
+ *  @param cols      列名称数组
+ */
+- (NSMutableArray *)searchDataWithTableName:(NSString *)tableName
+                              withSearchColDateDic:(NSDictionary *)valueDic
+                               withTableColNames:(NSMutableArray *)cols
+/**
+ * 数据库根据列数组更新数据
+ *
+ *  @param tableName 要更新的表的名称
+ *  @param valueDic      查找基准键值对
+ *  @param newValueDic   更新数据键值对
+ */
+- (BOOL)updataWithTableName:(NSString *)tableName
+       withSearchColDateDic:(NSDictionary *)valueDic
+        withNewColDateDic:(NSDictionary *)newValueDic
+/**
+ * 根据列名称删除数据库一条数据
+ *
+ *  @param tableName 要删除的表的名称
+ */
+- (void)deleteWithTableName:(NSString *)tableName
+                withColName:(NSString *)colName
+                withColData:(id)data
